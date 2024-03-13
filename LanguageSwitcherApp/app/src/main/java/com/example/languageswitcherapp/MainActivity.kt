@@ -1,11 +1,6 @@
-package com.example.clickmeapp
+package com.example.languageswitcherapp
 
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -21,19 +16,5 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val clickMeBtn=findViewById<Button>(R.id.clickMeBtn)
-        var inputField=findViewById<EditText>(R.id.nameInput)
-        var welcomeTv=findViewById<TextView>(R.id.WelcomeTv)
-
-
-        clickMeBtn.setOnClickListener {
-            Toast.makeText(this@MainActivity, "Button Clicked",Toast.LENGTH_LONG).show()
-            welcomeTv.text="Welcome , ${inputField.text}"
-//            clearing the field after clicking
-            inputField.text.clear()
-
-        }
-
-
     }
 }
