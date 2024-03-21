@@ -3,26 +3,28 @@ package com.example.sportsteamapp
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Switch
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class MainActivity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main2)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val switch=findViewById<Button>(R.id.homeBtn)
+       switch.setOnClickListener{
+           intent
+           val homeIntent=Intent(this,MainActivity::class.java)
+           startActivity(homeIntent)
 
-        val nextBtn=findViewById<Button>(R.id.nextBtn)
-        nextBtn.setOnClickListener { intent
-        val page2=Intent(this,MainActivity2::class.java)
-            startActivity(page2)
         }
     }
 }
