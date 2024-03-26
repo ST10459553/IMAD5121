@@ -25,20 +25,20 @@ class MainActivity : AppCompatActivity() {
 
 
 
-    addBtn.setOnClickListener {
-        fun add(num1:Int, num2:Int): Int {
-            total= num1+num2
-            return total
-        }
-
-
-       add(num1Value,num2Value)
-        result.text= "your result is ${total}"
-
-
-
-
-        }
+//    addBtn.setOnClickListener {
+//        fun add(num1:Int, num2:Int): Int {
+//            total= num1+num2
+//            return total
+//        }
+//
+//
+//       add(num1Value,num2Value)
+//        result.text= "your result is ${total}"
+//
+//
+//
+//
+//        }
 
 
 
@@ -52,11 +52,6 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
-
-
-
-
 
 
 
