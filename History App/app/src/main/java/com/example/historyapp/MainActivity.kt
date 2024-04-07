@@ -23,7 +23,9 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         var figuresArr= listOf(HistoricalPeople(R.drawable.pointing,56,"joemama","handsome")
-            , HistoricalPeople(R.drawable.mandela,99,"Nelson", "Mandela was the first black President of South Africa")
+            , HistoricalPeople(R.drawable.mandela,99,"Nelson Mandela", "Mandela was the first black President of South Africa"),
+            HistoricalPeople(R.drawable.pngegg,86, "Nikolas Tesla","Invented electricity" ),
+            HistoricalPeople(R.drawable.adolf, 56,"Adolf Hitler", "War Lord")
             )
         var inputField=findViewById<EditText>(R.id.editText)
         val clearBtn=findViewById<Button>(R.id.clearBtn)
@@ -61,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 
                     figureIv.setImageResource(i.image)
                     figureInfo.setBackgroundColor(Color.WHITE)
-                    figureInfo.text="The historical Figure that Matches The age Providedis is ${i.name} "
+                    figureInfo.text="The historical Figure that Matches The age Provided is is ${i.name} "
                     notFoundIv.setImageDrawable(null)
                     break
                 }
