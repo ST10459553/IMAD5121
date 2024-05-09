@@ -1,7 +1,9 @@
 package com.example.bmiapp
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +27,7 @@ class MainActivity2 : AppCompatActivity() {
         val resultTv=findViewById<TextView>(R.id.bmiResult)
         var maleBmi:Double
         var femaleBmi:Double
+        val startAgainBtn=findViewById<Button>(R.id.startAgain)
 
 
        fun maleBmiRange(){
@@ -86,6 +89,11 @@ class MainActivity2 : AppCompatActivity() {
             maleBmiRange()
            resultTv.text=maleBmiText
        }
+
+        startAgainBtn.setOnClickListener {
+            val previousActivity=Intent(this,MainActivity::class.java)
+            startActivity(previousActivity)
+        }
 
 
 

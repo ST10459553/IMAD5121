@@ -37,8 +37,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <GridLayout
-        android:layout_width="415dp"
-        android:layout_height="574dp"
+        android:id="@+id/gridLayout3"
+        android:layout_width="396dp"
+        android:layout_height="548dp"
         android:background="@drawable/custom_button"
         android:columnCount="1"
         android:rowCount="4"
@@ -70,8 +71,17 @@
             android:textStyle="bold" />
 
 
-
-
     </GridLayout>
 
+    <Button
+        android:id="@+id/startAgain"
+        android:layout_width="116dp"
+        android:layout_height="119dp"
+        android:background="@drawable/incrementing_button"
+        android:drawableTop="@drawable/baseline_restart_alt_24"
+        android:theme="@style/start_Again_Color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

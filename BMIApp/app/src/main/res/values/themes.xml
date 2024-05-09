@@ -11,5 +11,8 @@
     <style name="incrementing_color" parent="Widget.MaterialComponents.Button">
         <item name="colorPrimary">@color/white</item>
     </style>
+    <style name="start_Again_Color" parent="Widget.MaterialComponents.Button">
+        <item name="colorPrimary">#5C1523</item>
+    </style>
     <style name="Theme.BMIApp" parent="Base.Theme.BMIApp" />
 </resources>
