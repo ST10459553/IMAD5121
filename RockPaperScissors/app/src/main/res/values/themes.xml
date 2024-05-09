@@ -3,7 +3,11 @@
     <style name="Base.Theme.RockPaperScissors" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">#CFC37D</item>
     </style>
+<style name="grid_layout" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
+    <item name="colorPrimary">@color/black</item>
+</style>
     <style name="Theme.RockPaperScissors" parent="Base.Theme.RockPaperScissors" />
 </resources>

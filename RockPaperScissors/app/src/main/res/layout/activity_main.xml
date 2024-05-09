@@ -5,11 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#858F76"
     tools:context=".MainActivity">
 
     <Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="61dp"
+        android:layout_height="66dp"
         android:background="#302B2B"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,5 +32,156 @@
 
 
     </Toolbar>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="295dp"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text="Pick Your Move"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.012" />
+
+    <Button
+
+        android:id="@+id/rockBtn"
+        android:layout_width="105dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="16dp"
+        android:paddingTop="13dp"
+        android:background="@drawable/custom_moves_shape"
+        android:drawableTop="@drawable/rock_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/paperBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/scissorsBtn"
+        android:layout_width="105dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="16dp"
+        android:drawableTop="@drawable/scissors_icon"
+        android:paddingTop="12dp"
+        android:background="@drawable/custom_moves_shape"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toEndOf="@+id/paperBtn"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.115" />
+
+    <Button
+        android:id="@+id/paperBtn"
+        android:layout_width="105dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:drawableTop="@drawable/paper_icon"
+        android:paddingTop="12dp"
+        android:background="@drawable/custom_moves_shape"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toEndOf="@+id/rockBtn"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.115" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="441dp"
+        android:layout_height="487dp"
+        android:layout_marginBottom="64dp"
+        android:columnCount="2"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.937">
+
+        <TextView
+
+            android:layout_width="218dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="6dp"
+            android:background="@drawable/moves_shape"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Your Move"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <TextView
+
+            android:layout_width="207dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/moves_shape"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="AI Move"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:theme="@style/grid_layout" />
+
+        <ImageView
+            android:layout_marginTop="6dp"
+            android:id="@+id/moveIv"
+            android:layout_width="219dp"
+            android:layout_height="340dp"
+            android:layout_rowSpan="1"
+             />
+
+        <ImageView
+            android:layout_marginTop="6dp"
+            android:id="@+id/AiMoveIv"
+            android:layout_width="211dp"
+            android:layout_height="338dp"
+            android:layout_rowSpan="1"
+            android:scaleX="-1"
+            />
+
+        <TextView
+            android:id="@+id/resultTv"
+            android:layout_width="325dp"
+            android:layout_height="85dp"
+            android:layout_rowSpan="3"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:gravity="center"
+
+            android:textColor="@color/black"
+            android:textSize="35sp" />
+
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/scoreBar"
+        android:layout_width="303dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_moves_shape"
+        android:gravity="center"
+
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="0.333" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
