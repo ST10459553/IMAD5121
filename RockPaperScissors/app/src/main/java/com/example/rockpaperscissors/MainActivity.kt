@@ -48,18 +48,20 @@ class MainActivity : AppCompatActivity() {
         var result=""
         var score=Score(0,0,0)
 
-
+//        function that the user move to the usermove Imageview
 
         fun setImage(img:Int){
 
             userMoveIv.setImageResource(img)
 
-
         }
-
+// set the computer move in the ai move imageview
         fun setAiImage(img:Int){
             aiMoveIv.setImageResource(img)
         }
+
+
+//        generate random numbers from 1 to 3 then assign ech possible  number to a move
 
         fun randomMove(){
             val randoNumber=(1..3).random()
@@ -77,7 +79,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-
+//win conditions three possibilities for each move
         fun conditions(){
             if (userMove=="rock"){
                 if (aiMove==userMove){
@@ -124,6 +126,8 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
+
         fun scoreControl(){
 
             if (result=="Win"){
