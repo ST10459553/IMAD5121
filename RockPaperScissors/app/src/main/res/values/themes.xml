@@ -10,4 +10,10 @@
     <item name="colorPrimary">@color/black</item>
 </style>
     <style name="Theme.RockPaperScissors" parent="Base.Theme.RockPaperScissors" />
+    <style name="Theme.RockPaperScissors.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/rock_paper_scissors_edited</item>
+        <item name="postSplashScreenTheme">@style/Theme.RockPaperScissors</item>
+
+
+    </style>
 </resources>
